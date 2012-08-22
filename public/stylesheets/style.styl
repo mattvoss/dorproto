@@ -1,5 +1,5 @@
 $link1 = #A79B82
-
+$copy_color = #666
 @import('fonts');
 @import('reset');
 @import('globals');
@@ -268,6 +268,7 @@ p.big-text {
 	display: block;
 	overflow: hidden;	
 }
+/* 
 h2.leadin-title {
 	display: block;	
 	position: absolute;
@@ -284,9 +285,25 @@ h2.leadin-title {
 .second-level h2.leadin-title {
 	font-size: 28px;
 	bottom: -4px;
+} */
+.leadin-link p.leadin-excerpt {
+	margin-top: 2%;
+	padding-top: 0;
+	color: $copy_color;
+}
+h2.leadin-title {
+	display: block;	
+	position: relative;
+	padding: 5% 0 0;
+	width: 100%;
+	color: $link1;
+	font-size: 38px;
+}
+.second-level h2.leadin-title {
+	font-size: 28px;
 }
 .entry-content {
-	color: #717071;
+	color: $copy_color;
 }
 .entry-content .button {
 	color: #555;
@@ -331,8 +348,6 @@ h2.leadin-title {
 .leadin-wrap.thumbs .iconic,
 .leadin-wrap.thumbs .icon {
 	font-size: 16px;
-	position: absolute;
-	bottom: -2px;	
 	font-size: 32px;
 	padding: 15px 15px 0 2px;
 }
