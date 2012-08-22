@@ -1,0 +1,45 @@
+/* Globals */
+body {
+  font-family: "ff-dagny-web-pro";
+	font-size: 87.5%;
+	background: #fff;
+}
+.no-flick, .entry-content li, .site-title a {-webkit-transform:translate3d(0,0,0);}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+a, a em, .iconic { -webkit-transition: .2s all ease-in-out; -moz-transition: .2s all ease-in-out;}
+::selection,
+-moz-::selection {
+	background: rgba(255, 247, 44,.75);
+	color: black;
+	text-shadow: none;
+}
+.style1 .entry-content p a {
+  color: $link1;
+	text-decoration: none;
+	border-bottom: 1px solid lighten($link1, 60%);
+}
+.style1 .entry-content p a:hover {
+  color: darken($link1, 30%);
+	text-decoration: none;
+	border-bottom: 1px solid darken($link1, 10%);		
+}
+strong {
+	font-weight: bold;
+}
+blockquote {
+	font-style: italic;
+	font-family: "Chaparral Pro", georgia, serif;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-left: 2px solid #ddd;	
+}

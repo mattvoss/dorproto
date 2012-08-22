@@ -2,12 +2,128 @@
 <html>
   <head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-		<script type="text/javascript" src="js/my_scripts.js"></script>
+    <link rel='stylesheet' href='leaflet/leaflet.css' />
+    <link rel='stylesheet' href='/javascripts/colorbrewer/colorbrewer.css' />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.fitvids.js"></script>
+		<script type="text/javascript" src="javascripts/my_scripts.js"></script>
+		<script type="text/javascript" src="javascripts/d3.v2.js"></script>	
+		<script type="text/javascript" src="javascripts/d3.layout.js"></script>	
+		<script type="text/javascript" src="leaflet/leaflet-src.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGPjRUxdRf6T77RybGCDWrWIIW0pTSB0&sensor=false"></script>
+		<script type="text/javascript" src="javascripts/jquery-flexslider-min.js"></script>
+		<script type="text/javascript" src="javascripts/buoys.js"></script>
+		<script type="text/javascript" src="javascripts/colonias-counties.js"></script>		
+		<script type="text/javascript" src="http://use.typekit.com/wgu8gaf.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>		
+		<script>	
+		$(window).load(function() {
+			  // The slider being synced must be initialized first
+			  $('#carousel').flexslider({
+			    animation: "slide",
+			    controlNav: false,
+			    animationLoop: false,
+			    slideshow: false,
+					animationSpeed: 300,			
+			    itemWidth: 150,
+			    itemMargin: 5,
+			    asNavFor: '#slider'
+			  });
+
+			  $('#slider').flexslider({
+			    animation: "slide",
+			    controlNav: false,
+			    animationLoop: false,
+					animationSpeed: 300,
+			    slideshow: false,
+			    sync: "#carousel"
+			  });
+			});
+		</script>
   </head>
-  <body>
-    <%- body %>
+  <body class="<%= body_class %> style1">
+	
+	<div class="container">		
+		<header id="site-header">			
+			<div class="wrap header-wrap clearfix">
+				<h1 class="site-title"><a href="/"><%= title %></a></h1>	
+			<!--	<div class="search-form">	
+					<form>
+						<input class="search-input" placeholder="e.g. Solar Energy" />
+					</form>
+				</div> -->	
+				<div class="menu-button"><span class='iconic list'></span></div>
+				<nav class="site-navigation">			
+						<ul role="navigation">
+							<li><a class="nav-link" href=""><span class='iconic magnifying_glass'></span></a></li>
+							<li><a class="nav-link" href="">Sort</a></li>
+							<li><a class="nav-link" href="/archive">Visualize</a></li>							
+							<li><a class="nav-link" href="/archive">Read</a></li>													
+							<li><a class="nav-link" href="/archive">Watch</a></li>																																	
+						</ul>		
+				</nav>							
+			</div> 
+				
+		</header><!-- /#site-header  -->
+		<div class="wrap main-wrap">		
+			<div role="main" class="clearfix">
+		    <%- body %>
+			</div><!-- /main -->
+		</div><!-- /.wrap .header-wrap  -->			
+	</div><!-- /.container -->
+		
+	<footer role="contentinfo" class="site-footer clearfix">
+		<div class="wrap footer-wrap clearfix">
+			<ul class="footer-site-navigation">
+				<li><a href=""><span class='iconic magnifying_glass'></span> Search</a></li>				
+				<li class="icon-list-item"><a class="icon-list-link" href=""><span class="iconic eye"></span> Watch</a></li>
+				<li class="icon-list-item"><a class="icon-list-link" href=""><span class="iconic book_alt2"></span> Read</a></li>
+				<li class="icon-list-item"><a class="icon-list-link" href=""><span class="iconic chart"></span> Visualize</a></li>	
+				<li><a href=""><span class="iconic tag_fill"></span> Tags</a></li>																																			
+			</ul>	
+			<ul>			
+				<li><a href=""><span class='iconic calendar_alt_fill'></span> Events</a></li>	
+				<li><a href=""><span class='iconic bars'></span> Rankings</a></li>							
+				<li><a href=""><span class='iconic document_alt_fill'></span> Capacities</a></li>	
+				<li><a href=""><span class='iconic mic'></span> News Feeds</a></li>							
+				<li><a href=""><span class='iconic bolt'></span> Impacts</a></li>													
+			</ul>						
+			<ul>
+				<li><a href="">Centers &amp; Institutes</a></li>
+				<li><a href="">Colleges</a></li>					
+				<li><a href="">Campuses</a></li>																								
+			</ul>	
+			<ul>				
+				<li><a href="">Division of Research</a></li>				
+				<li><a href="">Faculty Honors</a></li>
+				<li><a href="">History</a></li>																						
+			</ul>		
+			<ul>
+				<li><a href="">Land, Sea, Space-Grant</a></li>				
+				<li><a href="">Major Projects</a></li>				
+				<li><a href="">Student Research</a></li>	
+				<li><a href=""><span class='iconic mail'></span> Contact Us</a></li>																			
+			</ul>		
+									
+		</div><!-- /.wrap .footer-wrap  -->
+		<div class="copyright clearfix">
+			<div class="wrap clearfix">			
+				<ul>
+					<li>&copy; 2012 <a href="">	Texas A&amp;M University</a></li>
+					<li><a href="">Privacy &amp; Security</a></li>
+					<li><a href="">Legal Notes</a></li>
+					<li><a href="">Accessibility Policy</a></li>
+					<li><a href="">Compact With Texans</a></li>	
+					<li class="footer-logo-item"><a href=""><img class="branding-mark" src="/images/logo-white.png" /></a></li>														
+				</ul>		
+			</div>	
+		</div>	
+	</footer><!-- /#footer -->	
+
+	
+		
   </body>
 </html>

@@ -1,0 +1,257 @@
+[
+	{
+		"state": "Alabama",
+		"order": "1",
+		"rate": "32.2"
+	},
+	{
+		"state": "Alaska",
+		"order": "2",
+		"rate": "24.5"
+	},
+	{
+		"state": "Arizona",
+		"order": "3",
+		"rate": "24.3"
+	},
+	{
+		"state": "Arkansas",
+		"order": "4",
+		"rate": "30.1"
+	},
+	{
+		"state": "California",
+		"order": "5",
+		"rate": "24.0"
+	},
+	{
+		"state": "Colorado",
+		"order": "6",
+		"rate": "21.0"
+	},
+	{
+		"state": "Connecticut",
+		"order": "7",
+		"rate": "22.5"
+	},
+	{
+		"state": "Delaware",
+		"order": "8",
+		"rate": "28.0"
+	},
+	{
+		"state": "District of Columbia",
+		"order": "9",
+		"rate": "22.2"
+	},
+	{
+		"state": "Florida",
+		"order": "10",
+		"rate": "26.6"
+	},
+	{
+		"state": "Georgia",
+		"order": "11",
+		"rate": "29.6"
+	},
+	{
+		"state": "Hawaii",
+		"order": "12",
+		"rate": "22.7"
+	},
+	{
+		"state": "Idaho",
+		"order": "13",
+		"rate": "26.5"
+	},
+	{
+		"state": "Illinois",
+		"order": "14",
+		"rate": "28.2"
+	},
+	{
+		"state": "Indiana",
+		"order": "15",
+		"rate": "29.6"
+	},
+	{
+		"state": "Iowa",
+		"order": "16",
+		"rate": "28.4"
+	},
+	{
+		"state": "Kansas",
+		"order": "17",
+		"rate": "29.4"
+	},
+	{
+		"state": "Kentucky",
+		"order": "18",
+		"rate": "31.3"
+	},
+	{
+		"state": "Louisiana",
+		"order": "19",
+		"rate": "31.0"
+	},
+	{
+		"state": "Maine",
+		"order": "20",
+		"rate": "26.8"
+	},
+	{
+		"state": "Maryland",
+		"order": "21",
+		"rate": "27.1"
+	},
+	{
+		"state": "Massachusetts",
+		"order": "22",
+		"rate": "23.0"
+	},
+	{
+		"state": "Michigan",
+		"order": "23",
+		"rate": "30.9"
+	},
+	{
+		"state": "Minnesota",
+		"order": "24",
+		"rate": "24.8"
+	},
+	{
+		"state": "Mississippi",
+		"order": "25",
+		"rate": "34.0"
+	},
+	{
+		"state": "Missouri",
+		"order": "26",
+		"rate": "30.5"
+	},
+	{
+		"state": "Montana",
+		"order": "27",
+		"rate": "23.0"
+	},
+	{
+		"state": "Nebraska",
+		"order": "28",
+		"rate": "26.0"
+	},
+	{
+		"state": "Nevada",
+		"order": "29",
+		"rate": "22.4"
+	},
+	{
+		"state": "New Hampshire",
+		"order": "30",
+		"rate": "25.0"
+	},
+	{
+		"state": "New Jersey",
+		"order": "31",
+		"rate": "23.8"
+	},
+	{
+		"state": "New Mexico",
+		"order": "32",
+		"rate": "25.1"
+	},
+	{
+		"state": "New York",
+		"order": "33",
+		"rate": "23.9"
+	},
+	{
+		"state": "North Carolina",
+		"order": "34",
+		"rate": "27.8"
+	},
+	{
+		"state": "North Dakota",
+		"order": "35",
+		"rate": "27.2"
+	},
+	{
+		"state": "Ohio",
+		"order": "36",
+		"rate": "29.2"
+	},
+	{
+		"state": "Oklahoma",
+		"order": "37",
+		"rate": "30.4"
+	},
+	{
+		"state": "Oregon",
+		"order": "38",
+		"rate": "26.8"
+	},
+	{
+		"state": "Pennsylvania",
+		"order": "39",
+		"rate": "28.6"
+	},
+	{
+		"state": "Rhode Island",
+		"order": "40",
+		"rate": "25.5"
+	},
+	{
+		"state": "South Carolina",
+		"order": "41",
+		"rate": "31.5"
+	},
+	{
+		"state": "South Dakota",
+		"order": "42",
+		"rate": "27.3"
+	},
+	{
+		"state": "Tennessee",
+		"order": "43",
+		"rate": "30.8"
+	},
+	{
+		"state": "Texas",
+		"order": "44",
+		"rate": "31.0"
+	},
+	{
+		"state": "Utah",
+		"order": "45",
+		"rate": "22.5"
+	},
+	{
+		"state": "Vermont",
+		"order": "46",
+		"rate": "23.2"
+	},
+	{
+		"state": "Virginia",
+		"order": "47",
+		"rate": "26.0"
+	},
+	{
+		"state": "Washington",
+		"order": "48",
+		"rate": "25.5"
+	},
+	{
+		"state": "West Virginia",
+		"order": "49",
+		"rate": "32.5"
+	},
+	{
+		"state": "Wisconsin",
+		"order": "50",
+		"rate": "26.3"
+	},
+	{
+		"state": "Wyoming",
+		"order": "51",
+		"rate": "25.1"
+	}
+]

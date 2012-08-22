@@ -1,0 +1,242 @@
+<article class="entry-content">
+	<div class="column">	
+		<header class="article-header">
+			<h1 class="article-title"><%= title %></h1>
+				<date class="article-date"><span class='iconic clock'></span><span class="word1"> Oct </span><span class="word2">10th </span><span class="word3"> 2012</span></date>	
+		</header>
+	
+	<p>Three hundred ninety-seven miles of beaches; an abundant source of vacation activities; ample fishing, waterfowl hunting, and birding; major ports that are the economic engine of the community; commercial fisheries—this is the Texas Gulf Coast—an abundance of natural resources with an economic interplay that is critical to the state of Texas.</p>
+	
+	<p>What protects these resources, both environmentally and economically? Technology that has been developed at <a href="">Texas A&amp;M University</a> through a team of researchers that have engineered the only buoy system of its kind in the Gulf of Mexico and one of the few of its kind in the world—the <a href="">Texas Automated Buoy System</a>, or TABS as it is known, that accurately predicts the movement of oil spills.</p>
+
+		<h2 class="viz-title">TABS on Texas Coast</h2>
+	<!--	<div id="map_canvas" style="height:450px;"></div> -->
+		<div id="map" class="tabs-map"></div>
+
+	
+	<p><em>“The instruments on each buoy can tell us precise information about ocean currents, wind speed, water temperature, and other data that allows us to accurately predict where a spill is headed and when it will present a problem to the coastline,”</em> says Norman Guinasso Jr., project manager of the TABS project, part of the College of Geosciences’ Geochemical and Environmental Research Group (GERG) at Texas A&amp;M.</p>
+	
+	<blockquote><p>The buoy system has already saved Texas taxpayers hundreds of thousands of dollars and has served as a model for other universities that are developing similar buoys to detect pollution such as oil spills.</p></blockquote>
+	
+	<p>Three hundred and ten million tons of imported crude oil are transported through the Gulf of Mexico every year. Over 20 percent of that is lightered to smaller tankers for delivery to ports in Texas. On average, five tankers a day call on the port of Houston.</p>
+	
+	<p>During 1995, the Berge Banker spill released approximately 2,000 barrels of oil into the Gulf and sea conditions made it difficult to track. Arial observations indicated that the oil was being broken up and was unlikely to impact the coast. Eleven days after the spill, oil came ashore on Matagorda Island in the form of thick tar balls. One year later TABS data was used during the Buffalo Marine Barge 292 oil spill and TABS data showed that the currents had reversed—saving hundreds of thousands of dollars that would have been spent protecting the Sabine Wildlife Sanctuary.</p>
+	
+	<p>At the time of the Berge Banker spill the commercial fishery alone was worth over 400 million dollars per year and 30,000 jobs. Recreational fishing was responsible for 11,000 jobs and $320 million in annual revenue. The tourism industry along the Texas coast supported 100,000 jobs and contributed $6 billion annually to the Texas economy. By 2007, coastal tourism in Texas was worth $12 billion—double what it was at the time of the 1995 spill.</p>
+	
+	<p>Almost 6 million people live in the Texas coastal area and are dependent on the natural resources of the Texas Gulf Coast’s lands, waters, wildlife, beaches, bays, and estuaries to create and maintain a sustainable economy.</p>
+	
+	<p>Texas A&amp;	M University is involved in numerous research projects that focus on protecting and preserving the abundant resources of the Texas Gulf coast:</p>
+
+	<div class="links-section">
+		<h2>Links</h2> 
+		<ul>
+			<li><a href="http://www.thebatt.com/colombia-enlists-a-m-help-to-purify-dirty-waters-1.2844448"><span class='iconic link'></span> Colombia Enlists A&amp;M Help to Purify Dirty Waters<em>Texas A&amp;M is cleaning up Colombia's dirty water</em></a></li> 
+
+			<li><a href="http://www.seco.cpa.state.tx.us/colonias.htm"><span class='iconic link'></span> Colonias Projects (water purification systems)<em>The Colonias Region and the help Texas A&amp;M is providing</em></a></li> 
+
+			<li><a href="http://aggie-horticulture.tamu.edu/earthkind/drought/water/"><span class='iconic link'></span> Efficient Use of Water<em>Texas drought and Texas A&amp;M Horticulture</em></a></li>
+		<ul>
+	</div>
+
+	<div class="entry-meta">
+		<div class="article-tags">
+			<p><span class='iconic tag_fill'></span> Tags</p>
+			<ul>
+				<li><a href="">Solar</a></li>
+				<li><a href="">Light</a></li>
+				<li><a href="">Energy</a></li>																								
+			</ul>
+		</div>
+	</div>
+	</div>	
+	
+
+
+<div class="sidebar">	
+	<div class="links-section">
+		<h2>Recent</h2> 
+		<ul>
+			<li><a href="/tabs"><span class='iconic pin'></span> TABS<em>Research at Texas A&amp;M and the TABS Gulf Coast Buoys</em></a></li>
+
+			<li><a href="/water"><span class='iconic pin'></span> Water Desalination<em>The Colonias Region and the help Texas A&amp;M is providing</em></a></li> 
+
+			<li><a href="/light"><span class='icon'>v</span> Solar Light Pipe<em>Texas A&amp;M Architecture researchers solving problems</em></a></li>
+		<ul>
+	</div>
+	<div class="links-section">
+		<h2>Related</h2> 
+		<ul>
+			<li><a href="">Lorem Ipsum<em>Capacities</em></a></li>
+			
+			<li><a href="">Lorem Ipsum<em>Rankings</em></a></li> 
+
+		<ul>
+	</div>	
+</div>
+	
+		<script type="text/javascript">
+
+		// Define a GeoJSON data layer with data
+		var geojsonLayer = new L.GeoJSON();
+		
+		geojsonLayer.addGeoJSON(buoysData);
+		
+		// Display the name property on click
+		geojsonLayer.on('featureparse', function (e) {
+		    if (e.properties && e.properties.name){
+		        e.layer.bindPopup(e.properties.name);
+		    }
+		});
+
+		var cloudmadeURL = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png';
+
+		var BuoyIcon = L.Icon.extend({
+		    iconUrl: 'images/buoy-icon.png',
+		    shadowUrl: 'images/buoy-icon-shadow.png',
+		    iconSize: new L.Point(38, 95),
+		    shadowSize: new L.Point(68, 95),
+		    iconAnchor: new L.Point(22, 94),
+		    popupAnchor: new L.Point(-3, -76)
+		});
+		
+		var circleOptions = {
+				fillColor: 'yellow',
+				fillOpacity: '.5',
+				color: 'yellow'
+		},
+			markerOptions = {
+				icon: BuoyIcon
+		};
+		
+		var buoyBContent = "<p><a href=''>This is <strong>Buoy B</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyDContent = "<p><a href=''>This is <strong>Buoy D</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyFContent = "<p><a href=''>This is <strong>Buoy F</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyHContent = "<p><a href=''>This is <strong>Buoy H</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyJContent = "<p><a href=''>This is <strong>Buoy J</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyKContent = "<p><a href=''>This is <strong>Buoy K</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",				
+				buoyRContent = "<p><a href=''>This is <strong>Buoy R</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyWContent = "<p><a href=''>This is <strong>Buoy W</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",
+				buoyNContent = "<p><a href=''>This is <strong>Buoy N</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>",						
+				buoyVContent = "<p><a href=''>This is <strong>Buoy V</strong></a>. TABS at Texas A&M</p> <p>Important info about the area, y'all</p>";					
+		
+		var buoyB = new L.CircleMarker(new L.LatLng(28.966667, -94.916667), circleOptions).bindPopup(buoyBContent),
+        buoyD = new L.CircleMarker(new L.LatLng(27.866667, -96.84), circleOptions).bindPopup(buoyDContent),
+        buoyF = new L.CircleMarker(new L.LatLng(28.833333, -95.233333), circleOptions).bindPopup(buoyFContent),
+				buoyH = new L.CircleMarker(new L.LatLng(27.866667, -96.55), circleOptions).bindPopup(buoyHContent),
+        buoyJ = new L.CircleMarker(new L.LatLng(26.183333, -97.05), circleOptions).bindPopup(buoyJContent),
+        buoyK = new L.CircleMarker(new L.LatLng(26.216667, -96.5), circleOptions).bindPopup(buoyKContent),
+        buoyR = new L.CircleMarker(new L.LatLng(29.616667, -93.633333), circleOptions).bindPopup(buoyRContent),
+        buoyW = new L.CircleMarker(new L.LatLng(28.333333, -96.016667), circleOptions).bindPopup(buoyWContent),
+        buoyN = new L.CircleMarker(new L.LatLng(27.883333, -94.033333), circleOptions).bindPopup(buoyNContent),
+        buoyV = new L.CircleMarker(new L.LatLng(27.883333, -93.6), circleOptions).bindPopup(buoyVContent);
+
+    var buoysLayer = new L.LayerGroup();
+
+		buoysLayer
+				.addLayer(buoyB)
+				.addLayer(buoyD)
+				.addLayer(buoyF)
+				.addLayer(buoyH)
+				.addLayer(buoyJ)
+				.addLayer(buoyK)
+				.addLayer(buoyR)
+				.addLayer(buoyW)
+				.addLayer(buoyN)
+				.addLayer(buoyV);
+
+		var geobuoysLayer = new L.LayerGroup();
+		
+		geobuoysLayer.addLayer(geojsonLayer);
+
+		var defaultMap = new L.TileLayer(cloudmadeURL, {styleId: 997}),
+				terrain = new L.TileLayer(cloudmadeURL, {styleId: 996}),
+				minimal = new L.TileLayer(cloudmadeURL, {styleId: 22677}),
+				midnightCommander = new L.TileLayer(cloudmadeURL, {styleId: 999});
+
+    var map = new L.Map('map', {center: new L.LatLng(28, -95), zoom: 6, maxZoom: 18, layers: [buoysLayer,defaultMap]});
+
+    var overlayMaps = {
+        "TABS Buoys": buoysLayer
+    };
+
+		var baseMaps = {
+		    "Default": defaultMap,	
+		    "Terrain": terrain,					
+		    "Minimal": minimal,
+		    "Night View": midnightCommander
+		};
+
+    layersControl = new L.Control.Layers(baseMaps, overlayMaps);
+    map.addControl(layersControl);
+
+
+/*		  // Create an object containing LatLng, population.
+		  var citymap = {};
+		  citymap['buoyB'] = {
+		    center: new google.maps.LatLng(28.966667, -94.916667),
+		    population: 2
+		  };
+		  citymap['buoyD'] = {
+		    center: new google.maps.LatLng(27.866667, -96.84),
+		    population: 2
+		  };
+		  citymap['buoyF'] = {
+		    center: new google.maps.LatLng(28.833333, -95.233333),
+		    population: 2 
+		  };
+		  citymap['buoyJ'] = {
+		    center: new google.maps.LatLng(26.183333, -97.05),
+		    population: 2
+		  };	
+		  citymap['buoyK'] = {
+		    center: new google.maps.LatLng(26.216667, -96.5),
+		    population: 2
+		  };
+		  citymap['buoyR'] = {
+		    center: new google.maps.LatLng(29.616667, -93.633333),
+		    population: 2 
+		  };
+		  citymap['buoyW'] = {
+		    center: new google.maps.LatLng(28.333333, -96.016667),
+		    population: 2
+		  };		
+		  citymap['buoyH'] = {
+		    center: new google.maps.LatLng(27.866667, -96.55),
+		    population: 2
+		  }
+	
+		  var cityCircle;
+
+			  function initialize() {
+			    var mapOptions = {
+			      zoom: 7,
+			      center: new google.maps.LatLng(28, -95),
+			      mapTypeId: google.maps.MapTypeId.HYBRID
+			    };
+
+			    var map = new google.maps.Map(document.getElementById("map_canvas"),
+			        mapOptions);
+
+			    for (var city in citymap) {
+			      // Construct the circle for each value in citymap. We scale population by 20.
+			      var populationOptions = {
+			        strokeColor: "#fff",
+			        strokeOpacity: 0.1,
+			        strokeWeight: 1,
+			        fillColor: "#ff0",
+			        fillOpacity: 0.65,
+			        map: map,
+			        center: citymap[city].center,
+			        radius: citymap[city].population * 4000	
+			      };
+			      cityCircle = new google.maps.Circle(populationOptions);
+			    }
+			  }
+				window.onload = function () {
+				    initialize();
+				}
+*/			
+			</script>		
+
+</article><!-- /.entry-content -->

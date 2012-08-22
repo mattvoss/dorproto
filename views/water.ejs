@@ -1,0 +1,215 @@
+<article class="entry-content">	
+
+
+
+	<!--				<script type="text/javascript">
+		  // Create an object containing LatLng, population.
+		  var citymap = {};
+		  citymap['Qatar'] = {
+		    center: new google.maps.LatLng(25.354826, 51.183884),
+		    population: 1758793
+		  };
+		  citymap['Kuwait'] = {
+		    center: new google.maps.LatLng(29.31166, 47.481766),
+		    population: 2736732
+		  };
+		  citymap['Bahrain'] = {
+		    center: new google.maps.LatLng(25.930414, 50.637772),
+		    population: 1261835 
+		  };
+		  citymap['UnitedArabEmirates'] = {
+		    center: new google.maps.LatLng(23.424076, 53.847818),
+		    population: 7511690
+		  };	
+		  citymap['GazaStrip'] = {
+		    center: new google.maps.LatLng(31.466153715024294, 34.3212890625),
+		    population: 1657155
+		  }
+	
+		  var cityCircle;
+
+			  function initialize() {
+			    var mapOptions = {
+			      zoom: 5,
+			      center: new google.maps.LatLng(25, 46),
+			      mapTypeId: google.maps.MapTypeId.TERRAIN
+			    };
+
+			    var map = new google.maps.Map(document.getElementById("map_canvas"),
+			        mapOptions);
+
+			    for (var city in citymap) {
+			      // Construct the circle for each value in citymap. We scale population by 20.
+			      var populationOptions = {
+			        strokeColor: "#FF0000",
+			        strokeOpacity: 0.9,
+			        strokeWeight: 1,
+			        fillColor: "#FF0000",
+			        fillOpacity: 0.35,
+			        map: map,
+			        center: citymap[city].center,
+			        radius: citymap[city].population / 30	
+			      };
+			      cityCircle = new google.maps.Circle(populationOptions);
+			    }
+			  }
+			</script> -->
+	<!--		<script>
+			
+			// Our projection.
+			var xy = d3.geo.mercator().scale([1100]).translate([490, 400])
+				, path = d3.geo.path().projection(xy)
+				, world = d3.select("#viz")
+					.append("svg")
+						.attr("id", "world-wrap")
+				  .append("g")
+				    .attr("id", "world");		
+			
+			d3.json("javascripts/world-countries.json", function(collection) {
+			  world.selectAll("path")
+			      .data(collection.features)
+			    .enter().append("path")
+			      .attr("d", path)
+						.append("title")
+						.text(function(d) { return d.properties.name; });
+						
+				var mylat = 51.5333
+					, mylon = 25.3000
+					, coordinates = xy([mylat, mylon]);						
+			  world.append('circle')
+						.attr('cx', coordinates[0])
+						.attr('cy', coordinates[1])				
+						.attr('r', 6)
+						.style('fill', 'darkred');
+
+					d3.select("svg").on("mousedown.log", function() {
+					  console.log(xy.invert(d3.mouse(this)));
+					});						
+											
+			});		
+
+			</script> -->
+		<div class="column"> 	
+			<header class="article-header">
+				<h1 class="article-title"><%= title %></h1>
+					<date class="article-date"><span class='iconic clock'></span><span class="word1"> Oct </span><span class="word2">10 </span><span class="word3"> 2012</span></date>	
+			</header>
+		<p>Planet Earth. Seven continents. Seven billion people. All surrounded by water that we cannot drink.  And it’s a problem we can’t ignore.</p>
+
+		<p>According to the World Health Organization, one in nine people worldwide don’t have access to a clean or improved water source. Over three and a half million people (the population of Los Angeles) die from water related diseases every year. In China, India, and Indonesia, twice as many people are dying from diseases related to unsafe water than die from HIV/AIDS.</p> 
+
+		<h2 class="viz-title">Texas Colonias and Treatment Centers</h2>
+		<div id="map" class="water-map-viz"></div>
+
+		<p>Water is essential to life and not just for drinking. Agriculture uses more water than we could ever drink. For every 2-4 liters needed daily for consumption and cleaning, another 2,000 to 5,000 liters are needed to produce the food we eat every day.</p>
+
+		<p>Unsafe water also has a huge economic impact. Globally, water is a $400 billion industry.  That places it third behind oil and electricity. But the other resources have alternatives if we were to run out. There are no new water sources and there is no substitute for what we have.</p>
+		
+		<p>Think about it. The water we drink today is the same water the dinosaurs drank millions of years ago.</p>
+	
+		<p>The population and demand for clean, safe water continues to grow. That’s where researchers from Texas A&amp;M University come in</p>
+		
+		<p>Developing filters and cleaning agents to turn the dirtiest water into safe drinking water. Providing expertise to third world countries, so they too can have clean drinking water. And developing efficient strategies to narrow waste in irrigation systems. </p>
+	
+		<p>Texas A&amp;M is committed to answering the world’s water challenge. Out in front with research that provides solutions to combat critical water issues here and around the globe.</p>
+
+		<div class="links-section" style="clear:both; margin-top:50px;">
+			<h2>Links</h2> 
+			<ul>
+				<li><a href="http://www.thebatt.com/colombia-enlists-a-m-help-to-purify-dirty-waters-1.2844448"><span class='iconic link'></span> Colombia Enlists A&amp;M Help to Purify Dirty Waters<em>Texas A&amp;M is cleaning up Colombia's dirty water</em></a></li> 
+
+				<li><a href="http://www.seco.cpa.state.tx.us/colonias.htm"><span class='iconic link'></span> Colonias Projects (water purification systems)<em>The Colonias Region and the help Texas A&amp;M is providing</em></a></li> 
+
+				<li><a href="http://aggie-horticulture.tamu.edu/earthkind/drought/water/"><span class='iconic link'></span> Efficient Use of Water<em>Texas drought and Texas A&amp;M Horticulture</em></a></li>
+			<ul>
+		</div>
+
+		<div class="entry-meta">
+			<div class="article-tags">
+				<p><span class='iconic tag_fill'></span> Tags</p>
+				<ul>
+					<li><a href="">Solar</a></li>
+					<li><a href="">Light</a></li>
+					<li><a href="">Energy</a></li>																								
+				</ul>
+			</div>		
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+
+
+	var map = new L.Map('map');
+
+	var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+		cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18});
+
+	map.setView(new L.LatLng(30, -101), 5).addLayer(cloudmade);
+	
+	var gpri = new L.LatLng(30.619481, -96.3393495),
+		agrilife_elpaso = new L.LatLng(31.6395026, -106.2757514),
+		laredo = new L.LatLng(27.506407, -99.5075421),		
+		marker_gpri = new L.Marker(gpri).bindPopup("<p>The Global Petroleum Research Institute (GPRI) is the managing partner of a Cooperative effort to conduct critical research in the development of petroleum technology.</p>"),
+		marker_agrilife_elpaso = new L.Marker(agrilife_elpaso).bindPopup("<p>The mission of the <a href=''>El Paso Center</a> is to lead and conduct innovative water, natural resources and environmental research to serve the needs of Far West Texas and the state.</p>"),
+		marker_laredo = new L.Marker(laredo).bindPopup("<p>Laredo Advanced Vapour - Compression Evaporation Desalination Plant</p>");	
+			
+	map.addLayer(marker_gpri);
+	map.addLayer(marker_agrilife_elpaso);		
+	map.addLayer(marker_laredo);	
+	
+	var geojsonLayer = new L.GeoJSON(null, {
+	    pointToLayer: function (latlng){
+	        return new L.CircleMarker(latlng, {
+	            radius: 8,
+	            fillColor: "#ff7800",
+	            color: "#000",
+	            weight: 1,
+	            opacity: 1,
+	            fillOpacity: 0.8
+	        });
+	    }
+	});
+
+
+	geojsonLayer.on("featureparse", function (e) {
+	    var popupContent = "<p>I'm <strong>" + e.properties.name + "</strong> County in the Colonias Region</p>";
+	    if (e.properties && e.properties.popupContent) {
+	        popupContent += e.properties.popupContent;
+	    }
+	    e.layer.bindPopup(popupContent);
+	    if (e.properties && e.properties.style && e.layer.setStyle) {
+	        e.layer.setStyle(e.properties.style);
+	    }
+	});
+
+
+	map.addLayer(geojsonLayer);
+
+	geojsonLayer.addGeoJSON(ColoniasCounties);
+
+
+	</script>
+
+	<div class="sidebar">	
+		<div class="links-section">
+			<h2>Recent</h2> 
+			<ul>
+				<li><a href="/tabs"><span class='iconic pin'></span> TABS<em>Research at Texas A&amp;M and the TABS Gulf Coast Buoys</em></a></li>
+
+				<li><a href="/water"><span class='iconic pin'></span> Water Desalination<em>The Colonias Region and the help Texas A&amp;M is providing</em></a></li> 
+
+				<li><a href="/light"><span class='icon'>v</span> Solar Light Pipe<em>Texas A&amp;M Architecture researchers solving problems</em></a></li>
+			<ul>
+		</div>
+		<div class="links-section">
+			<h2>Related</h2> 
+			<ul>
+				<li><a href="">Lorem Ipsum<em>Capacities</em></a></li>
+
+				<li><a href="">Lorem Ipsum<em>Rankings</em></a></li> 
+
+			<ul>
+		</div>
+	</div>
+</article><!-- /.entry-content -->

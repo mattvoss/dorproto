@@ -30,7 +30,33 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-
+app.get('/water', function(req, res){
+  res.render('water', { title: 'Water Desalination', body_class: 'water' })
+});
+app.get('/energy', function(req, res){
+  res.render('energy', { title: 'Energy Article', body_class: 'energy' })
+});
+app.get('/light', function(req, res){
+  res.render('light', { title: 'Light Article', body_class: 'light ' })
+});
+app.get('/tabs', function(req, res){
+  res.render('tabs', { title: 'TABS Article', body_class: 'tabs' })
+});
+app.get('/obesity', function(req, res){
+  res.render('obesity', { title: 'Slimming Down a Super Sized Nation', body_class: 'obesity' })
+});
+app.get('/styleguide', function(req, res){
+  res.render('styleguide', { title: 'Style Guide', body_class: 'style guide' })
+});
+app.get('/funding', function(req, res){
+  res.render('funding', { title: 'Funding', body_class: 'funding' })
+});
+app.get('/rovers', function(req, res){
+  res.render('rovers', { title: 'Mars Rovers', body_class: 'rovers' })
+});
+app.get('/archive', function(req, res){
+  res.render('archive', { title: 'Archive', body_class: 'archive' })
+});
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

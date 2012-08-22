@@ -1,0 +1,242 @@
+<article class="entry-content">
+	<div class="column">		
+	<header class="article-header">
+		<h1 class="article-title"><%= title %></h1>
+			<date class="article-date"><span class='iconic clock'></span><span class="word1"> Oct </span><span class="word2">10 </span><span class="word3"> 2012</span></date>	
+	</header>
+	<script src="javascripts/d3.v2.js"></script>
+	<script src="javascripts/colorbrewer/colorbrewer.js"></script>
+
+	<p>The news about America’s waistline is staggering. In 2010, the Centers for Disease Control and Prevention released numbers that at least 20 percent of residents are considered “obese” in every state. In 12 states, over 30 percent of residents are obese.</p>
+	
+	<p>In addition, over 26 million Americans suffer from Type 2 diabetes. Another 80 million are on the tipping point; many don’t know they are at risk. Other factors, such as heart disease and high blood pressure, are also on the increase.</p>
+	
+	<p>Those affected the most are the young. For the first time in the recent history, today’s children have a greater chance of dying at a younger age than their parents.</p>
+	
+	<p>Texas A&amp;M University is committed to identifying ways to combat obesity. Researchers are looking at the makeup of other animals and what helps them regulate weight, designing areas with green space and trails, lending to more walking and exercise. And teaching kids and their parents how to eat smarter.</p>
+	
+	<p>The nation’s health is a primary concern. And Texas A&amp;M is doing its part to solve the problem.</p>
+
+	<div class="links-section">
+		<h2>Links</h2> 
+		<ul>
+			
+			<li><a href="http://tamutimes.tamu.edu/2012/05/14/study-eyes-how-built-environment-can-aid-active-living-deter-obesity/"><span class='iconic link'></span> Study Eyes How Built Environment Can Aid Active Living, Deter Obesity<em>Texas A&amp;M research</em></a></li>
+			<li><a href="http://tamunews.tamu.edu/2010/02/11/fruit-flies-could-provide-clues-to-obesity/"><span class='iconic link'></span> Fruit Flies Could Provide Clues To Obesity<em>Texas A&amp;M research</em></a></li>
+			<li><a href="http://education.tamu.edu/news-archive/2010/07/texas-am-pair-seeks-identify-key-factors-childhood-obesity"><span class='iconic link'></span> Texas A&amp;M Pair Seeks To Identify Key Factor in Childhood Obesity<em>Texas A&amp;M research</em></a></li>
+			<li><a href="http://education.tamu.edu/news-archive/2012/05/combating-childhood-obesity-healthy-choices"><span class='iconic link'></span> Combating Childhood Obesity With Healthy Choices<em>Texas A&amp;M research</em></a></li>
+			
+			<li><a href="http://today.agrilife.org/2012/05/31/healthy-obesity-research/"><span class='iconic link'></span> Is there a ‘healthy’ obesity gene?<em>Texas A&amp;M research</em></a></li>
+		<ul>
+	</div>
+
+	<div class="entry-meta">
+		<div class="article-tags">
+			<p><span class='iconic tag_fill'></span> Tags</p>
+			<ul>
+				<li><a href="">Solar</a></li>
+				<li><a href="">Light</a></li>
+				<li><a href="">Energy</a></li>																								
+			</ul>
+		</div>	
+	</div>
+</div>		
+		
+		
+<div class="sidebar">
+<div class="links-section">
+	<h2>Recent</h2> 
+	<ul>
+		<li><a href="/tabs"><span class='iconic pin'></span> TABS<em>Research at Texas A&amp;M and the TABS Gulf Coast Buoys</em></a></li>
+
+		<li><a href="/water"><span class='iconic pin'></span> Water Desalination<em>The Colonias Region and the help Texas A&amp;M is providing</em></a></li> 
+
+		<li><a href="/light"><span class='icon'>v</span> Solar Light Pipe<em>Texas A&amp;M Architecture researchers solving problems</em></a></li>
+	<ul>
+</div>
+<div class="links-section">
+	<h2>Related</h2> 
+	<ul>
+		<li><a href="">Lorem Ipsum<em>Capacities</em></a></li>
+		
+		<li><a href="">Lorem Ipsum<em>Rankings</em></a></li> 
+
+	<ul>
+</div>
+
+</div>
+<div id="container">	
+	
+	<h2 class="viz-title">% of Population BMI >= 30 in 2010</h2>
+	<div id="viz2">
+		
+	</div>		
+	<div id="viz">
+		
+	</div>
+	<div id="display">
+		
+	</div>
+
+
+<!--<script>
+	var svg = d3.select("#viz")
+	  .append("svg");
+	var obesity_json = "obesity-by-state2010.json";
+	d3.json("javascripts/"+obesity_json, function(data) {
+	  svg.selectAll("circle")
+	    .data(data)
+	    .enter()
+			.append("circle")
+	    	.attr("r", function(d,i) { 
+					var percent = data[i].rate/2;
+					return percent; 
+				})
+				.attr("cx", function(d,i) { return 25+data[i].order*18; } )
+				.attr("cy", function(d,i) { return 1080-data[i].rate*30; } )
+				.on("mouseover", function(d,i) { 
+					d3.selectAll(name = data[i].state);				
+					var display = document.getElementById("display");
+					display.innerHTML = name;
+				});		
+			});
+
+</script>-->
+<script>
+	var svg = d3.select("#viz")
+	  .append("svg");
+	var obesity_json = "obesity2005.json";
+	d3.json("javascripts/"+obesity_json, function(data) {
+	  svg.selectAll("circle")
+	    .data(data.cdata)
+	    .enter()
+			.append("circle")
+				.attr("class", "blue")
+	    	.attr("cy", function(d,i) { 
+					var percent = data.cdata[i].ADJPERCENT;
+					var state_avg;
+					return 950-percent*24; 
+				})
+				.attr("cx", function(d,i) { return data.cdata[i].STATE_FIPS*18; } )
+				.attr("r", function(d) { return 7; } )
+				.on("mouseover", function(d,i) { 
+					d3.selectAll(name = data.cdata[i].STATE_NAME+' '+data.cdata[i].COUNTY_NAME);
+					var display = document.getElementById("display");
+					display.innerHTML = name;
+				});			
+	});
+
+</script>
+
+<!--<script>
+
+var svg = d3.select("#viz").append("svg")
+	.attr("height", 1500);
+
+d3.json("javascripts/obesity2004.json", function(data) {
+  svg.selectAll("rect")
+    .data(data.cdata)
+    .enter().append("rect")
+			.attr("class", "bar")
+    	.attr("y", function(d,i) { return data.cdata[i].STATE_FIPS*24; } )
+			.attr("width", function(d,i) { return data.cdata[i].ADJPERCENT*20; } )
+			.attr("height", 20)
+			.text( function(d,i) { return data.cdata[i].STATE_NAME*20; } );
+});
+	
+</script>-->
+<!--	<script>
+		var svg = d3.select("#viz")
+		  .append("svg");
+
+		d3.json("javascripts/obesity2004.json", function(data) {
+		  svg.selectAll("circle")
+		    .data(data.twothousandfour)
+		    .enter()
+				.append("circle")
+		    	.attr("cx", function(d,i) { return data.twothousandfour[i].ADJPERCENT*25; } )
+					.attr("cy", function(d,i) { return data.twothousandfour[i].STATE_FIPS*18; } )
+					.attr("r", function(d) { return 8; } );
+		});
+
+	</script> -->
+		
+<!-- <script>	
+	var data; // loaded asynchronously
+
+	var path = d3.geo.path();
+
+	var svg = d3.select("#viz")
+	  .append("svg");
+
+	var counties = svg.append("g")
+	    .attr("id", "counties")
+	    .attr("class", "Blues");
+
+	var states = svg.append("g")
+	    .attr("id", "states");
+
+	d3.json("javascripts/us-counties.json", function(json) {
+	  counties.selectAll("path")
+	      .data(json.features)
+	    .enter().append("path")
+	      .attr("class", data ? quantize : null)
+	      .attr("d", path);
+	});
+
+	d3.json("javascripts/us-states.json", function(json) {
+	  states.selectAll("path")
+	      .data(json.features)
+	    .enter().append("path")
+	      .attr("d", path);
+	});
+
+	d3.json("javascripts/obesity2004.json", function(data) {
+	  counties.selectAll("path")
+			.data(data.counties)
+	      .attr("class", function(d,i) { return "q" + Math.min(8, ~~(data.counties[i].ADJPERCENT * 3 / 12)) + "-9"; } );
+	});
+	
+
+	</script> -->
+
+<!--<script>
+// The radius scale for the centroids.
+var r = d3.scale.sqrt()
+    .domain([0, 1e6])
+    .range([0, 10]);
+
+// Our projection.
+var xy = d3.geo.albersUsa();
+
+var svg = d3.select("#viz").append("svg");
+svg.append("g").attr("id", "states");
+svg.append("g").attr("id", "state-centroids");
+
+d3.json("javascripts/us-states.json", function(collection) {
+  svg.select("#states")
+    .selectAll("path")
+      .data(collection.features)
+    .enter().append("path")
+      .attr("d", d3.geo.path().projection(xy));
+});
+
+d3.json("javascripts/obesity2004.json", function(collection) {
+  svg.select("#state-centroids")
+    .selectAll("circle")
+      .data(collection.counties
+      .sort(function(a, i) { return b.properties.population; }))
+    .enter().append("circle")
+      .attr("transform", function(d) { return "translate(" + xy(d.geometry.coordinates) + ")"; })
+      .attr("r", 0)
+    .transition()
+      .duration(1000)
+      .delay(function(d, i) { return i * 50; })
+      .attr("r", function(d, i) { return r(d.counties()); });
+});
+
+</script> -->
+
+	
+	
+</article><!-- /.entry-content -->
