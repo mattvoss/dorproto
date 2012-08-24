@@ -1014,23 +1014,29 @@ h2.leadin-title {
 .second-level h2.leadin-title {
   font-size: 28px;
 }
+.feature-pages-section {
+  clear: both;
+  padding-top: 2%;
+  margin-top: 2%;
+}
+.feature-pages-section .leadin-wrap {
+  width: 18%;
+  float: left;
+  display: block;
+  margin-right: 2%;
+}
+.feature-pages-section h2.leadin-title {
+  font-size: 22px;
+}
 .entry-content {
   color: #666;
 }
 .entry-content .button {
-  color: #555;
-  background-color: #ebe8de;
-  background-image: -webkit-linear-gradient(top, #ebe8de, #c8bd9b);
-  background-image: -moz-linear-gradient(top, #ebe8de, #c8bd9b);
-  background-image: -ms-linear-gradient(top, #ebe8de, #c8bd9b);
-  background-image: -o-linear-gradient(top, #ebe8de, #c8bd9b);
+  color: #a79b82;
+  border: 1px solid #ebe8de;
 }
 .entry-content .button:hover {
   background-color: #ebe8de;
-  background-image: -webkit-linear-gradient(top, #ebe8de, #b7a66d);
-  background-image: -moz-linear-gradient(top, #ebe8de, #b7a66d);
-  background-image: -ms-linear-gradient(top, #ebe8de, #b7a66d);
-  background-image: -o-linear-gradient(top, #ebe8de, #b7a66d);
 }
 .entry-content .button.contrast {
   color: #fff;
@@ -1121,6 +1127,12 @@ body.home .links-section h2 {
 .tags-section h2 {
   color: #999;
   font-size: 20px;
+}
+.more-tags-button,
+.archive-button {
+  clear: both;
+  display: block;
+  margin-top: 2%;
 }
 .links-section li a {
   display: block;
