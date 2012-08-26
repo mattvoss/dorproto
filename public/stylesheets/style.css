@@ -828,17 +828,29 @@ img {
 .header-wrap {
   padding: 15px 5%;
 }
+.search-form {
+  background: #eee;
+  display: block;
+}
+.search .search-wrap {
+  width: 40%;
+  float: right;
+  margin-top: 0;
+}
+.search .search-wrap h2 {
+  border: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
 .search-input {
   border-radius: 50px;
+  margin: 20px;
   padding: 9px 20px 9px 30px;
   border: 1px solid #ddd;
   box-shadow: inset 0 2px 2px rgba(0,0,0,0.05);
   background: #fff url("/images/search.png") no-repeat 5px 50%;
-  width: 220px;
-  float: right;
+  width: 90%;
   position: relative;
-  top: 10px;
-  right: 0;
 }
 /* Article */
 /*
@@ -900,7 +912,8 @@ date {
   font-size: 20px;
   line-height: 24px;
 }
-.entry-content h2 {
+.entry-content h2,
+.search h2 {
   font-weight: 500;
   font-size: 22px;
   line-height: 22px;
@@ -1236,7 +1249,8 @@ body.home .links-section h2 {
 .tags-section ul {
   overflow: hidden;
 }
-.entry-content .tags-section ul li {
+.entry-content .tags-section ul li,
+.search .tags-section ul li {
   display: block;
   float: left;
   margin: 0 5px 5px 0;
@@ -1440,6 +1454,10 @@ body.home .links-section h2 {
   .tags-section {
     float: right;
     width: 40%;
+  }
+  .search .tags-section {
+    float: left;
+    width: 56%;
   }
   .second-level {
     width: 49%;

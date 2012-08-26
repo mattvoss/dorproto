@@ -57,7 +57,9 @@ app.get('/rovers', function(req, res){
 app.get('/archive', function(req, res){
   res.render('archive', { title: 'Archive', body_class: 'archive' })
 });
-
+app.get('/search', function(req, res){
+  res.render('search', { title: 'Search', body_class: 'search' })
+});
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
