@@ -275,11 +275,20 @@ p.big-text {
 	overflow: hidden;
 	display: block;
 	text-decoration: none;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;	
+	transition: all .2s ease;	
 }
 .leadin-img {
 	max-width: 100%;	
 	display: block;
 	overflow: hidden;	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;	
+	transition: all .2s ease;	
+	opacity: 1;	
 }
 /* 
 h2.leadin-title {
@@ -321,7 +330,7 @@ h2.leadin-title {
 	margin-top: 2%;
 }
 .feature-pages-section .leadin-wrap {
-	width: 18%;
+	width: 31.3%;
 	float: left;
 	display: block;
 	margin-right: 2%;
@@ -760,6 +769,12 @@ body.home .links-section h2 {
 	.second-level-right {
 		float: right;
 	}	
+	.leadin-link:hover img.leadin-img {
+		opacity: 9;
+	}
+	.leadin-link:hover h2.leadin-title {
+		color: darken($link1, 30%);
+	}		
 }
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
 	.site-title a {
