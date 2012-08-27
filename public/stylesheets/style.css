@@ -1258,11 +1258,19 @@ body.home .links-section h2 {
 .site-footer .copyright ul li.footer-logo-item {
   padding: 10px 0;
 }
-.site-footer .copyright ul li.footer-logo-item a {
+.site-footer .copyright ul li.twitter-icon-item,
+.site-footer .copyright ul li.youtube-icon-item {
+  padding: 10px 5px;
+}
+.site-footer .copyright ul li.footer-logo-item a,
+.site-footer .copyright ul li.twitter-icon-item a,
+.site-footer .copyright ul li.youtube-icon-item a {
   padding-top: 0px;
   opacity: 0.8;
 }
-.site-footer .copyright ul li.footer-logo-item a:hover {
+.site-footer .copyright ul li.footer-logo-item a:hover,
+.site-footer .copyright ul li.twitter-icon-item a:hover,
+.site-footer .copyright ul li.youtube-icon-item a:hover {
   opacity: 1;
 }
 .branding-mark {
