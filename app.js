@@ -60,6 +60,18 @@ app.get('/archive', function(req, res){
 app.get('/search', function(req, res){
   res.render('search', { title: 'Search', body_class: 'search' })
 });
+app.get('/tag', function(req, res){
+  res.render('tag', { title: 'Tag', body_class: 'tag' })
+});
+app.get('/hp3', function(req, res){
+  res.render('hp3', { title: 'hp3', body_class: 'hp3 home' })
+});
+app.get('/hp2', function(req, res){
+  res.render('hp2', { title: 'hp2', body_class: 'hp2 home' })
+});
+app.get('/hp1', function(req, res){
+  res.render('hp1', { title: 'hp1', body_class: 'hp1 home' })
+});
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

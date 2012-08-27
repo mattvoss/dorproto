@@ -981,6 +981,10 @@ p.big-text {
   width: 100%;
   margin-bottom: 2%;
 }
+.leadin-wrap.first-article {
+  overflow: hidden;
+  height: auto;
+}
 .leadin-link {
   position: relative;
   display: block;
@@ -1013,7 +1017,8 @@ p.big-text {
   color: #fff;
   font-size: 38px;
   font-weight: 100;
-  background: rgba(50,50,50,0.80);
+  background: rgba(30,30,30,0.75);
+  box-shadow: inset 0 -30px 30px rgba(0,0,0,0.20);
 }
 .leadin-info-wrap span.iconic,
 .leadin-info-wrap span.icon {
@@ -1047,14 +1052,38 @@ h2.leadin-title {
 }
 .feature-pages-section {
   clear: both;
-  padding-top: 2%;
-  margin-top: 2%;
+  padding-top: 4%;
+  margin-top: 4%;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .feature-pages-section .leadin-wrap {
   width: 31.3%;
   float: left;
   display: block;
   margin-right: 2%;
+}
+.hp2 .feature-pages-section .leadin-wrap {
+  width: 48%;
+}
+.hp1 .feature-pages-section .leadin-wrap {
+  width: 100%;
+  float: none;
+  margin-right: 0;
+}
+.hp1 .feature-pages-section .leadin-wrap .leadin-img {
+  width: 30.3%;
+  float: left;
+  margin-right: 2%;
+}
+.hp2 .feature-pages-section .leadin-wrap .leadin-img {
+  width: 50%;
+  float: left;
+  margin-right: 2%;
+}
+.hp1 .feature-pages-section .leadin-wrap h2.leadin-title,
+.hp2 .feature-pages-section .leadin-wrap h2.leadin-title {
+  padding-top: 0;
 }
 .feature-pages-section h2.leadin-title {
   font-size: 22px;
@@ -1486,6 +1515,9 @@ body.home .links-section h2 {
     float: right;
     width: 40%;
   }
+  .last-posts-section {
+    margin-top: 15px;
+  }
   .search .tags-section {
     float: left;
     width: 56%;
@@ -1497,6 +1529,9 @@ body.home .links-section h2 {
   .second-level-right {
     float: right;
   }
+  .first-article .leadin-wrap {
+    min-height: 300px;
+  }
   .leadin-link:hover img.leadin-img {
     opacity: 9;
   }
@@ -1506,6 +1541,24 @@ body.home .links-section h2 {
   .leadin-link:hover span.iconic,
   .leadin-link:hover span.icon {
     color: #7a6e56;
+  }
+  .tag .links-section {
+    width: 72%;
+    float: left;
+  }
+  .tag .archive-grid ul li {
+    width: 25%;
+  }
+  .tag .sidebar ul li {
+    width: 100%;
+    height: auto;
+  }
+  .tag .sidebar ul li a {
+    height: auto;
+  }
+  .tag .sidebar {
+    width: 25%;
+    margin-top: 0;
   }
 }
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
