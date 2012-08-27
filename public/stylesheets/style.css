@@ -1092,8 +1092,10 @@ h2.leadin-title {
   color: #666;
 }
 .entry-content .button {
+  background: #fff;
   color: #a79b82;
   border: 1px solid #ebe8de;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
 }
 .entry-content .button:hover {
   background-color: #ebe8de;
