@@ -933,9 +933,37 @@ date {
 .archive-grid ul li a {
   padding: 1em 0.75em;
   -webkit-transition: none;
+  overflow: hidden;
 }
 .archive-grid ul li:nth-child(odd) a {
   background: #f9f9f9;
+}
+.archive-grid-item-with-img a {
+  min-height: 200px;
+}
+.archive-grid-img {
+  position: absolute;
+  top: 0;
+  left: -0.75em;
+  z-index: 1;
+  max-width: 150%;
+}
+.grid-item-wrap {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  margin-bottom: 0;
+  margin-left: -1em;
+  width: 105%;
+  color: #a79b82;
+  font-weight: 100;
+  background: rgba(30,30,30,0.75);
+  box-shadow: inset 0 -30px 30px rgba(0,0,0,0.20);
+  z-index: 2;
+}
+.links-section .archive-grid-item-with-img .grid-item-wrap li a em {
+  color: #fff;
 }
 p.big-text {
   font-size: 46px;
@@ -1007,6 +1035,9 @@ p.big-text {
   opacity: 1;
   box-shadow: 0 0 2px rgba(0,0,0,0.50);
 }
+.first-article img.leadin-img {
+  width: 100%;
+}
 .leadin-info-wrap {
   display: block;
   position: absolute;
@@ -1021,10 +1052,17 @@ p.big-text {
   box-shadow: inset 0 -30px 30px rgba(0,0,0,0.20);
 }
 .leadin-info-wrap span.iconic,
-.leadin-info-wrap span.icon {
-  font-size: 20px;
+.leadin-info-wrap span.icon,
+.first-posts-section span.iconic,
+.first-posts-section span.icon {
+  font-size: 16px;
   color: #a79b82;
   margin-top: -2px;
+  margin-right: 2px;
+}
+.leadin-info-wrap span.iconic,
+.leadin-info-wrap span.icon {
+  font-size: 20px;
   margin-right: 8px;
 }
 .leadin-link p.leadin-excerpt {
@@ -1075,6 +1113,12 @@ h2.leadin-title {
   width: 30.3%;
   float: left;
   margin-right: 2%;
+}
+.feature-pages-section .leadin-wrap p {
+  line-height: 20px;
+}
+.hp1 .feature-pages-section .leadin-wrap p {
+  max-width: 80%;
 }
 .hp2 .feature-pages-section .leadin-wrap .leadin-img {
   width: 50%;
@@ -1228,6 +1272,18 @@ body.home .links-section h2 {
 }
 .links-section li a:hover em {
   color: #6b6d73;
+}
+.links-section li a .grid-item-wrap {
+  color: #c1b9a8;
+}
+.links-section li a .grid-item-wrap em {
+  color: #fff;
+}
+.links-section li a:hover .grid-item-wrap {
+  color: #a79b82;
+}
+.links-section li a:hover .grid-item-wrap em {
+  color: #eee;
 }
 .footer-wrap {
   padding-top: 1.5em;
@@ -1455,10 +1511,15 @@ body.home .links-section h2 {
   .archive-grid ul li {
     width: 20%;
     float: left;
+    position: relative;
   }
   .archive-grid ul li a {
     padding: 1em;
     height: 200px;
+  }
+  .archive-grid-item-with-img	a {
+    color: #fff;
+    overflow: hidden;
   }
   .shadow {
     box-shadow: 0 0 10px rgba(0,0,0,0.20);
@@ -1533,9 +1594,6 @@ body.home .links-section h2 {
   }
   .first-article .leadin-wrap {
     min-height: 300px;
-  }
-  .leadin-link:hover img.leadin-img {
-    opacity: 9;
   }
   .leadin-link:hover h2.leadin-title {
     color: #7a6e56;
