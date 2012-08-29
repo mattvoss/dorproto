@@ -1013,6 +1013,9 @@ p.big-text {
   overflow: hidden;
   height: auto;
 }
+.first-article {
+  margin-top: 5%;
+}
 .leadin-link {
   position: relative;
   display: block;
@@ -1080,7 +1083,7 @@ h2.leadin-title {
   padding: 5% 0 0;
   width: 100%;
   color: #a79b82;
-  font-size: 38px;
+  font-size: 24px;
 }
 .leadin-link p.leadin-title {
   padding-left: 20px;
@@ -1465,6 +1468,12 @@ body.home .links-section h2 {
     padding: 0.35em 0;
     font-size: 20px;
     width: 17%;
+  }
+  h2.leadin-title {
+    font-size: 38px;
+  }
+  .first-article {
+    margin-top: 0;
   }
   .entry-content p {
     font-size: 18px;
