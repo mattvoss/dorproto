@@ -593,6 +593,9 @@ body.home .links-section h2 {
 	box-shadow: inset 0 5px 20px rgba(0, 0, 0, .2);
 	border-top: 8px solid #CCC;	
 }
+.big-logo {
+	display: none;
+}
 .site-footer a {
 	color: #ccc;
 	text-decoration: none;
@@ -708,7 +711,7 @@ body.home .links-section h2 {
 	}
 	.site-footer .copyright ul li {
 		float: left;
-		padding: 18px 17px 10px 0;		
+		padding: 22px 17px 10px 0;		
 	}		
 }
 
@@ -831,13 +834,18 @@ body.home .links-section h2 {
 		box-shadow: 0 0 10px rgba(0,0,0,.2);
 	}
 	.site-footer ul,
-	.lists-w-icons {
+	.lists-w-icons,
+	.big-logo {
+		display: block;
 		float: left;
 		width: 20%;
 	}
-	.site-footer .footer-wrap ul:last-child {
-		float: right;
-	}	
+	img.big-logo-img {
+		width: 75%;
+		margin-top: 15%;
+		margin-right: 18%;
+		float: right;		
+	}
 	.site-footer .footer-wrap ul li {
 		float: none;
 		width: 100%;	
