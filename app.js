@@ -72,6 +72,9 @@ app.get('/hp2', function(req, res){
 app.get('/hp1', function(req, res){
   res.render('hp1', { title: 'hp1', body_class: 'hp1 home' })
 });
+app.get('/news', function(req, res){
+  res.render('news', { title: 'News', body_class: 'news' })
+});
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

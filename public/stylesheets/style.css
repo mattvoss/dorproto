@@ -1637,6 +1637,35 @@ body.home .links-section h2 {
     width: 25%;
     margin-top: 0;
   }
+  body.news .article-title {
+    margin: 0.2em 0 0;
+  }
+  body.news .links-section li a {
+    padding-left: 100px;
+    position: relative;
+  }
+  body.news .links-section li a span.newsDate {
+    left: 0;
+    top: 0.75em;
+    position: absolute;
+    color: #999;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  body.news .links-section li a:hover span.newsDate {
+    color: #666;
+  }
+  .news-feed1,
+  .news-feed2 {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .news-feed2 {
+    float: right;
+    margin-right: 0;
+  }
 }
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
   .site-title a {
