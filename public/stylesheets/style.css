@@ -853,33 +853,6 @@ img {
   position: relative;
 }
 /* Article */
-/*
-date {
-	border-radius: 50px;
-	border: 2px solid #999;
-	text-align: center;
-	font-family: "proxima-nova-condensed";
-	display: block;
-	float: left;
-	margin: -5px 10px 5px 0;	
-	color: #c7c8ca;
-	border-radius: 100px;
-	padding: 7px 14px;
-	width: 50px;
-	font-size: 13px;
-}
-date .word1 {
-	display: block;
-	width: 100%;		
-}
-date .word2 {
-	font-size: 20px;
-	display: block;
-}
-date .word3 {
-		display: none;
-}
-*/
 date {
   font-family: "proxima-nova-condensed";
   display: block;
@@ -1637,24 +1610,60 @@ body.home .links-section h2 {
     width: 25%;
     margin-top: 0;
   }
-  body.news .article-title {
+  body.news .article-title,
+  body.events .article-title {
     margin: 0.2em 0 0;
   }
-  body.news .links-section li a {
-    padding-left: 100px;
+  body.news .links-section li a,
+  body.events .links-section li a {
+    padding-left: 80px;
     position: relative;
+    padding-bottom: 3em;
   }
-  body.news .links-section li a span.newsDate {
+  body.events .links-section li a {
+    padding-top: 1em;
+    padding-bottom: 1.2em;
+  }
+  body.news .links-section li a em.newsDate,
+  body.events .links-section li a em.newsDate {
     left: 0;
-    top: 0.75em;
+    top: 1em;
     position: absolute;
     color: #999;
+    font-style: normal;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-family: "proxima-nova-condensed";
+    display: block;
+    float: left;
+    margin: -5px 10px 5px 0;
+    color: #c7c8ca;
+    border-radius: 100px;
+    padding: 7px 14px;
+    width: 50px;
+    font-size: 13px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-  body.news .links-section li a:hover span.newsDate {
+  body.news .links-section li a:hover em.newsDate,
+  body.events .links-section li a:hover em.newsDate {
     color: #666;
+  }
+  body.news .links-section li a em.newsDate .word1,
+  body.events .links-section li a em.newsDate .word1 {
+    display: block;
+    width: 100%;
+  }
+  body.news .links-section li a em.newsDate .word2,
+  body.events .links-section li a em.newsDate .word2 {
+    font-size: 20px;
+    display: block;
+  }
+  body.news .links-section li a em.newsDate .word3,
+  body.events .links-section li a em.newsDate .word3 {
+    display: none;
   }
   .news-feed1,
   .news-feed2 {
@@ -1665,6 +1674,31 @@ body.home .links-section h2 {
   .news-feed2 {
     float: right;
     margin-right: 0;
+  }
+  .news-feed1 a,
+  .news-feed2 a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .news-feed1 a.button,
+  .news-feed2 a.button,
+  .events-wrap a.button {
+    margin-top: 2em;
+    padding: 8px 15px 6px 15px;
+    font-size: 18px;
+  }
+  .news-feed1 a span.iconic,
+  .news-feed2 a span.iconic,
+  .events-wrap a span.iconic {
+    color: #a79b82;
+    font-size: 12px;
+    padding: 1px 3px 7px 0;
+  }
+  .events-wrap {
+    width: 60%;
+  }
+  .events-wrap li a {
+    font-size: 22px;
   }
 }
 @media all and (-webkit-min-device-pixel-ratio : 1.5) {
