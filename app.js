@@ -6,7 +6,11 @@
 var express = require('express')
   , routes = require('./routes');
 
-var app = module.exports = express.createServer();
+function authorize(username, password) {
+    return 'admin' === username & 'lL6Do0JP' === password;
+}
+
+var app = module.exports = express.createServer(express.basicAuth(authorize));
 
 // Configuration
 
